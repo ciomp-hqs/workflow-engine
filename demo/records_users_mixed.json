@@ -1,0 +1,6 @@
+{"record_type": "user", "records": [
+  {"user_id": "U-1", "name": " Alice ", "email": "Alice@Example.COM"},
+  {"user_id": "U-2", "name": "Bob", "email": "not-an-email"},
+  {"user_id": "U-3", "email": "carol@example.com"},
+  {"user_id": "U-4", "name": "Dave", "email": "dave@example.org"}
+]}

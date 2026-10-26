@@ -1,0 +1,5 @@
+{"record_type": "order", "records": [
+  {"order_id": "O-1001", "amount": 12.5, "currency": "cny"},
+  {"order_id": "O-1002", "amount": 0.015, "currency": "USD"},
+  {"order_id": "O-1003", "amount": 199, "currency": "CNY"}
+]}

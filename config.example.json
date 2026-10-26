@@ -1,0 +1,14 @@
+{
+  "db_path": "data/wf.db",
+  "report_dir": "reports",
+  "output_dir": "output",
+  "outbox_dir": "outbox",
+  "max_workers": 4,
+  "llm": {
+    "mode": "inprocess",
+    "base_url": "http://127.0.0.1:8765",
+    "fail_first_n": {},
+    "always_fail": [],
+    "latency_seconds": 0
+  }
+}
