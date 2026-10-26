@@ -256,6 +256,12 @@ class Engine:
         if busy:
             raise InvalidStateError("cannot rerun while nodes are RUNNING: %s" % busy)
         targets = {from_node} | wfconfig.descendants(wf, from_node)
+        if new_input is not None:
+            # every node that reads $input is affected by the new input, not only from_node's subtree
+            for n in wf["nodes"]:
+                refs = list(expr.iter_refs([n.get("inputs"), n.get("params"), n.get("when")]))
+                if any(r.startswith("$input") for r in refs):
+                    targets |= {n["id"]} | wfconfig.descendants(wf, n["id"])
         for nid, st in nodes.items():
             if st["status"] in ("FAILED", "CANCELLED", "REJECTED"):
                 targets |= {nid} | wfconfig.descendants(wf, nid)
