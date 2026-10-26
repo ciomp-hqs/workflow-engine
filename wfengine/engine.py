@@ -15,7 +15,7 @@ import uuid
 from . import config as wfconfig
 from . import expr
 from .errors import (AttemptTimeout, InvalidStateError, NodeCancelled, NonRetryableError, RefError,
-                     StaleApprovalError, WorkflowError)
+                     StaleApprovalError)
 from .mock_llm import build_llm_client
 from .registry import node_types
 from .store import NODE_TERMINAL, RUN_ACTIVE, RUN_TERMINAL, Store
