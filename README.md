@@ -248,8 +248,8 @@ def transform_orders(inputs, ctx):
 ## 提交信息
 
 - 所选方向：B 通用工作流执行器
-- GitHub 仓库链接：`<待填写>`
-- 最终 commit SHA：`<待填写，git rev-parse HEAD>`
+- GitHub 仓库链接：https://github.com/ciomp-hqs/workflow-engine
+- 最终 commit SHA：以考试答卷中填写的为准（即 `git rev-parse HEAD`；SHA 无法写入它自身所在的提交）
 - 启动命令：`python3 -m wfengine run workflows/doc_review.json --input demo/doc_sensitive.json`（其余见"快速开始"）
 - 测试命令：`python3 -m unittest discover -s tests -v`
 - 演示步骤：`bash demo/run_demo.sh`，或上文"演示步骤"
